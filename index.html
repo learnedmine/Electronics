@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learned Electronics – Expert Phone, Laptop & Computer Repairs in Kenya</title>
+  <meta name="description" content="Learned Electronics offers fast, professional repair services for phones, laptops, computers and all electronics in Kenya. Book your repair online today." />
+  <meta name="keywords" content="phone repair Kenya, laptop repair Nairobi, computer repair, screen replacement, electronics technician Kenya, Learned Electronics" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Learned Electronics – Expert Electronics Repairs in Kenya" />
+  <meta property="og:description" content="Fast, trusted repairs for phones, laptops, computers and more." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Learned Electronics","telephone":"+254769319099","email":"learnermine01@gmail.com","address":{"@type":"PostalAddress","addressCountry":"KE"},"priceRange":"KSh","openingHours":"Mo-Sa 08:00-18:00"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0b; --black-2: #111215; --black-3: #1a1d22;
+      --gold: #00D4D8; --gold-light: #4DE8EB; --gold-dark: #008B8E;
+      --white: #E8F4F5; --white-dim: #8BA8AB;
+      --fd: 'Cormorant Garamond', serif; --fb: 'Outfit', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--fb); font-weight: 300; line-height: 1.7; overflow-x: hidden; font-size: 17px; }
+    ::selection { background: var(--gold); color: var(--black); }
+    ::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: var(--black); } ::-webkit-scrollbar-thumb { background: var(--gold-dark); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-label { font-family: var(--fb); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.8rem; }
+    .section-title { font-family: var(--fd); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; }
+    .divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin: 1.5rem 0 2.5rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem 2rem; border: none; cursor: pointer; font-family: var(--fb); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; transition: all 0.3s; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); }
+    .btn-gold:hover { filter: brightness(1.15); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,216,0.35); }
+    .btn-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 0; transition: all 0.4s; }
+    nav.scrolled { background: rgba(5,5,5,0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,212,216,0.15); padding: 0.7rem 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-logo { cursor: pointer; }
+    .nav-logo .logo-top { font-family: var(--fd); font-size: 1.6rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .nav-logo .logo-sub { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--white-dim); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--white-dim); font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; cursor: pointer; }
+    .nav-links a:hover { color: var(--gold); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--gold); transition: all 0.3s; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(5,5,5,0.99); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--fd); font-size: 2.8rem; color: var(--white); text-decoration: none; cursor: pointer; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close { position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: var(--gold); font-size: 2.2rem; cursor: pointer; }
+
+    /* HERO */
+    #home { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 5rem; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 65% 70% at 70% 50%, rgba(0,212,216,0.09) 0%, transparent 60%), linear-gradient(180deg,#050505,#080808); }
+    .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,212,216,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,216,0.04) 1px, transparent 1px); background-size: 55px 55px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%); }
+    .hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; animation: fadeUp 0.8s ease 0.2s both; }
+    .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+    .hero-eyebrow span { font-size: 0.82rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .hero-title { font-family: var(--fd); font-size: clamp(3rem, 6vw, 5.8rem); font-weight: 600; line-height: 1.0; margin-bottom: 1.5rem; animation: fadeUp 0.8s ease 0.4s both; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: 1.1rem; color: var(--white-dim); max-width: 480px; margin-bottom: 2.5rem; animation: fadeUp 0.8s ease 0.6s both; line-height: 1.8; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.8s both; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 4rem; animation: fadeUp 0.8s ease 1s both; border: 1px solid rgba(0,212,216,0.18); }
+    .stat { padding: 1.5rem 1rem; text-align: center; border-right: 1px solid rgba(0,212,216,0.18); background: rgba(0,212,216,0.04); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white-dim); margin-top: 0.4rem; }
+
+    /* Hero Visual */
+    .hero-visual { animation: fadeLeft 1s ease 0.5s both; display: flex; align-items: center; justify-content: center; }
+    .device-scene { position: relative; width: 360px; height: 420px; }
+    .device-laptop { position: absolute; bottom: 0; left: 0; right: 0; }
+    .laptop-screen-wrap { width: 300px; height: 200px; background: #0d1117; border: 1.5px solid rgba(0,212,216,0.4); border-radius: 6px 6px 0 0; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+    .laptop-bar { height: 22px; background: rgba(0,212,216,0.08); border-bottom: 1px solid rgba(0,212,216,0.15); display: flex; align-items: center; gap: 5px; padding: 0 10px; flex-shrink: 0; }
+    .lbar-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .laptop-screen-content { flex: 1; display: flex; align-items: center; justify-content: center; padding: 14px; }
+    .lsc-inner { width: 100%; text-align: center; }
+    .lsc-logo { font-family: var(--fd); font-size: 1rem; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+    .lsc-bar { height: 6px; background: rgba(0,212,216,0.2); border-radius: 3px; margin: 6px 0; }
+    .lsc-bar2 { height: 6px; background: rgba(0,212,216,0.1); border-radius: 3px; width: 70%; margin: 0 auto 10px; }
+    .lsc-pct { font-size: 1.8rem; font-family: var(--fd); color: var(--gold); font-weight: 700; }
+    .lsc-lbl { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--white-dim); text-transform: uppercase; }
+    .laptop-base { width: 300px; height: 16px; background: linear-gradient(180deg,#2a2a2a,#1a1a1a); border-radius: 0 0 6px 6px; margin: 0 auto; border: 1px solid rgba(0,212,216,0.2); border-top: none; }
+    .device-phone { position: absolute; right: -10px; top: 20px; width: 88px; height: 170px; background: linear-gradient(180deg,#1e1e1e,#141414); border: 1.5px solid rgba(0,212,216,0.4); border-radius: 14px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); display: flex; flex-direction: column; }
+    .phone-notch { width: 28px; height: 8px; background: #0a0a0a; border-radius: 0 0 6px 6px; margin: 0 auto; flex-shrink: 0; }
+    .phone-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 10px; }
+    .phone-icon-circle { width: 36px; height: 36px; border-radius: 10px; background: rgba(0,212,216,0.15); border: 1px solid rgba(0,212,216,0.4); display: flex; align-items: center; justify-content: center; }
+    .phone-bars { width: 100%; display: flex; flex-direction: column; gap: 5px; }
+    .pbar { height: 4px; background: rgba(0,212,216,0.18); border-radius: 2px; }
+    .pbar:nth-child(2) { width: 75%; } .pbar:nth-child(3) { width: 55%; }
+    .tool-badge { position: absolute; left: -15px; top: 40px; background: #1e1e1e; border: 1px solid rgba(0,212,216,0.35); padding: 10px 14px; border-radius: 6px; display: flex; align-items: center; gap: 8px; animation: float 4s ease-in-out infinite; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+    .tbdot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 6px #22c55e; flex-shrink: 0; }
+    .tbtext { font-size: 0.72rem; color: var(--white); white-space: nowrap; }
+    .wrench-badge { position: absolute; right: -5px; bottom: 60px; background: rgba(0,212,216,0.1); border: 1px solid rgba(0,212,216,0.4); padding: 10px 14px; border-radius: 6px; animation: float 4s ease-in-out 2s infinite; }
+
+    /* ABOUT */
+    #about { padding: 8rem 0; position: relative; }
+    #about::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, transparent, var(--gold), transparent); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-img-box { width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg,#111,#0a0a0a); border: 1px solid rgba(0,212,216,0.2); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .about-accent { position: absolute; bottom: -18px; right: -18px; width: 110px; height: 110px; border: 2px solid var(--gold); z-index: -1; }
+    .about-badge { position: absolute; bottom: 2rem; left: -2rem; background: var(--gold); color: var(--black); padding: 1.2rem 1.5rem; text-align: center; }
+    .about-badge strong { display: block; font-family: var(--fd); font-size: 2rem; font-weight: 700; }
+    .about-badge span { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .about-feat { display: flex; gap: 0.9rem; align-items: flex-start; }
+    .feat-icon { width: 40px; height: 40px; background: rgba(0,212,216,0.1); border: 1px solid rgba(0,212,216,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .feat-text strong { display: block; font-size: 0.95rem; font-weight: 500; }
+    .feat-text span { font-size: 0.82rem; color: var(--white-dim); }
+
+    /* SERVICES */
+    #services { padding: 8rem 0; background: var(--black-2); }
+    .services-header { text-align: center; margin-bottom: 4rem; }
+    .services-header .divider { margin: 1.5rem auto 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card { background: var(--black-3); border: 1px solid rgba(0,212,216,0.1); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: all 0.4s; }
+    .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+    .service-card:hover { border-color: rgba(0,212,216,0.35); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-num { font-family: var(--fd); font-size: 3.5rem; font-weight: 700; color: rgba(0,212,216,0.07); position: absolute; top: 0.8rem; right: 1.2rem; line-height: 1; }
+    .service-icon { width: 48px; height: 48px; margin-bottom: 1.2rem; }
+    .service-title { font-family: var(--fd); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .service-desc { font-size: 0.9rem; color: var(--white-dim); line-height: 1.7; margin-bottom: 1.5rem; }
+    .service-items { list-style: none; }
+    .service-items li { font-size: 0.85rem; color: var(--white-dim); padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.6rem; }
+    .service-items li::before { content: '—'; color: var(--gold); font-size: 0.75rem; }
+
+    /* BOOKING */
+    #booking { padding: 8rem 0; background: var(--black); }
+    .booking-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .booking-info > p { color: var(--white-dim); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.8; }
+    .booking-step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .step-num { width: 38px; height: 38px; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: var(--black); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; flex-shrink: 0; }
+    .step-text strong { display: block; font-size: 0.95rem; font-weight: 500; }
+    .step-text span { font-size: 0.85rem; color: var(--white-dim); }
+    .diag-form { background: var(--black-2); border: 1px solid rgba(0,212,216,0.22); padding: 2.5rem; }
+    .diag-form h3 { font-family: var(--fd); font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .diag-form > p { font-size: 0.88rem; color: var(--white-dim); margin-bottom: 2rem; }
+    .form-progress { display: flex; align-items: center; margin-bottom: 2rem; }
+    .prog-step { flex: 1; text-align: center; }
+    .prog-dot { width: 32px; height: 32px; border-radius: 50%; background: var(--black-3); border: 1px solid rgba(0,212,216,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; margin: 0 auto 0.4rem; color: var(--white-dim); transition: all 0.3s; }
+    .prog-step.active .prog-dot { background: var(--gold); border-color: var(--gold); color: var(--black); }
+    .prog-step.done .prog-dot { background: rgba(0,212,216,0.25); border-color: var(--gold); color: var(--gold); }
+    .prog-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); }
+    .prog-step.active .prog-label { color: var(--gold); }
+    .prog-line { height: 1px; background: rgba(0,212,216,0.2); flex: 0.6; margin-bottom: 1.6rem; }
+    .prog-line.done { background: var(--gold); }
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: fadeUp 0.4s ease; }
+    .tile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-bottom: 1.5rem; }
+    .tile { background: var(--black-3); border: 1px solid rgba(255,255,255,0.08); padding: 1rem 0.8rem; text-align: center; cursor: pointer; transition: all 0.25s; }
+    .tile:hover { border-color: rgba(0,212,216,0.4); background: rgba(0,212,216,0.05); }
+    .tile.selected { border-color: var(--gold); background: rgba(0,212,216,0.1); }
+    .tile-svg { width: 30px; height: 30px; display: block; margin: 0 auto 0.5rem; }
+    .tile-label { font-size: 0.8rem; }
+    .form-row { margin-bottom: 1.2rem; }
+    .form-row label { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 0.5rem; font-weight: 500; }
+    .form-row input, .form-row select, .form-row textarea { width: 100%; background: var(--black-3); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 0.85rem 1rem; font-family: var(--fb); font-size: 0.95rem; outline: none; transition: border-color 0.3s; -webkit-appearance: none; }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--gold); }
+    .form-row textarea { resize: vertical; min-height: 100px; }
+    .form-row select option { background: var(--black-3); }
+    .urgency-row { display: flex; gap: 0.7rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .urgency-btn { flex: 1; min-width: 90px; padding: 0.7rem 0.5rem; background: var(--black-3); border: 1px solid rgba(255,255,255,0.1); color: var(--white-dim); cursor: pointer; font-family: var(--fb); font-size: 0.82rem; text-align: center; transition: all 0.25s; }
+    .urgency-btn:hover { border-color: rgba(0,212,216,0.4); color: var(--white); }
+    .urgency-btn.selected { border-color: var(--gold); color: var(--gold); background: rgba(0,212,216,0.08); }
+    .form-nav { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .form-nav .btn { flex: 1; }
+    .btn-back { background: transparent !important; border: 1px solid rgba(255,255,255,0.15) !important; color: var(--white-dim) !important; flex: 0.5 !important; }
+    .btn-back:hover { border-color: var(--white-dim) !important; color: var(--white) !important; }
+    .form-success { display: none; text-align: center; padding: 3rem 1rem; }
+    .check-circle { width: 70px; height: 70px; border-radius: 50%; background: rgba(34,197,94,0.15); border: 2px solid #22c55e; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+    .form-success h4 { font-family: var(--fd); font-size: 2rem; margin-bottom: 0.8rem; }
+    .form-success p { color: var(--white-dim); font-size: 0.92rem; margin-bottom: 1.8rem; line-height: 1.8; }
+
+    /* PRODUCTS */
+    #products { padding: 8rem 0; background: var(--black-2); }
+    .products-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .products-filter { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .filter-btn { padding: 0.55rem 1.3rem; background: transparent; border: 1px solid rgba(255,255,255,0.12); color: var(--white-dim); cursor: pointer; font-family: var(--fb); font-size: 0.85rem; transition: all 0.25s; }
+    .filter-btn.active, .filter-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(0,212,216,0.06); }
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .product-card { background: var(--black-3); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s; position: relative; overflow: hidden; }
+    .product-card:hover { border-color: rgba(0,212,216,0.3); transform: translateY(-4px); }
+    .product-img { width: 100%; aspect-ratio: 1; background: var(--black-2); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.05); position: relative; }
+    .product-img svg { width: 65px; height: 65px; }
+    .product-badge { position: absolute; top: 0.8rem; left: 0.8rem; background: var(--gold); color: var(--black); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; }
+    .product-info { padding: 1.2rem; }
+    .product-name { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.3rem; }
+    .product-cat { font-size: 0.75rem; color: var(--white-dim); margin-bottom: 0.9rem; }
+    .product-bottom { display: flex; align-items: center; justify-content: space-between; }
+    .product-price { font-family: var(--fd); font-size: 1.25rem; color: var(--gold); font-weight: 600; }
+    .add-cart { width: 34px; height: 34px; background: rgba(0,212,216,0.1); border: 1px solid rgba(0,212,216,0.3); color: var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; transition: all 0.25s; }
+    .add-cart:hover { background: var(--gold); color: var(--black); }
+
+    /* GALLERY */
+    #gallery { padding: 8rem 0; background: var(--black); }
+    .gallery-header { text-align: center; margin-bottom: 3rem; }
+    .gallery-header .divider { margin: 1.5rem auto 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 190px); gap: 1rem; }
+    .gallery-item { background: var(--black-2); border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; cursor: pointer; transition: all 0.3s; }
+    .gallery-item:hover { border-color: rgba(0,212,216,0.4); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-item.large { grid-column: span 2; grid-row: span 2; }
+    .gallery-item svg { opacity: 0.45; transition: opacity 0.3s; }
+    .gallery-item:hover svg { opacity: 0.7; }
+    .gallery-overlay { position: absolute; inset: 0; background: rgba(0,212,216,0.12); display: flex; align-items: flex-end; padding: 1rem; opacity: 0; transition: opacity 0.3s; }
+    .gallery-overlay span { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+
+    /* TESTIMONIALS */
+    #testimonials { padding: 8rem 0; background: var(--black-2); }
+    .testimonials-header { text-align: center; margin-bottom: 4rem; }
+    .testimonials-header .divider { margin: 1.5rem auto 0; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .testi-card { background: var(--black-3); border: 1px solid rgba(0,212,216,0.1); padding: 2rem; }
+    .testi-quote { font-size: 3.5rem; color: var(--gold); opacity: 0.3; line-height: 1; font-family: var(--fd); margin-bottom: 0.8rem; }
+    .testi-text { font-size: 0.92rem; color: var(--white-dim); line-height: 1.75; margin-bottom: 1.5rem; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 1rem; }
+    .testi-avatar { width: 46px; height: 46px; border-radius: 50%; background: rgba(0,212,216,0.12); border: 1.5px solid rgba(0,212,216,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .testi-name { font-size: 0.92rem; font-weight: 500; }
+    .testi-device { font-size: 0.75rem; color: var(--gold); }
+    .testi-stars { color: var(--gold); font-size: 0.88rem; margin-bottom: 0.3rem; letter-spacing: 2px; }
+
+    /* PRICING */
+    #pricing { padding: 8rem 0; background: var(--black); }
+    .pricing-header { text-align: center; margin-bottom: 4rem; }
+    .pricing-header .divider { margin: 1.5rem auto 0; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .pricing-card { background: var(--black-2); border: 1px solid rgba(255,255,255,0.07); padding: 2.5rem 2rem; position: relative; transition: all 0.3s; }
+    .pricing-card.featured { border-color: var(--gold); background: linear-gradient(180deg,rgba(0,212,216,0.07) 0%,var(--black-2) 100%); }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 1.2rem; white-space: nowrap; }
+    .pricing-tier { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+    .pricing-device { font-family: var(--fd); font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .pricing-range { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem; }
+    .pricing-note { font-size: 0.78rem; color: var(--white-dim); margin-bottom: 2rem; }
+    .pricing-list { list-style: none; margin-bottom: 2rem; }
+    .pricing-list li { font-size: 0.85rem; color: var(--white-dim); padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.7rem; }
+    .pricing-list li::before { content: '✓'; color: var(--gold); font-size: 0.78rem; flex-shrink: 0; }
+
+    /* FAQs */
+    #faqs { padding: 8rem 0; background: var(--black-2); }
+    .faqs-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .faq-item { border-bottom: 1px solid rgba(0,212,216,0.1); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.3rem 0; cursor: pointer; font-size: 0.97rem; gap: 1rem; line-height: 1.5; }
+    .faq-icon { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-a { max-height: 200px; }
+    .faq-a p { font-size: 0.9rem; color: var(--white-dim); padding-bottom: 1.2rem; line-height: 1.8; }
+
+    /* TEAM */
+    #team { padding: 8rem 0; background: var(--black); }
+    .team-header { text-align: center; margin-bottom: 4rem; }
+    .team-header .divider { margin: 1.5rem auto 0; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; }
+    .team-card { text-align: center; padding: 2.5rem 1.5rem; background: var(--black-2); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s; }
+    .team-card:hover { border-color: rgba(0,212,216,0.3); transform: translateY(-4px); }
+    .team-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg,rgba(0,212,216,0.2),rgba(0,212,216,0.05)); border: 2px solid rgba(0,212,216,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+    .team-name { font-family: var(--fd); font-size: 1.4rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .team-role { font-size: 0.74rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; font-weight: 500; }
+    .team-bio { font-size: 0.88rem; color: var(--white-dim); line-height: 1.7; }
+
+    /* CONTACT */
+    #contact { padding: 8rem 0; background: var(--black-2); }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+    .contact-info > p { color: var(--white-dim); font-size: 0.95rem; margin-bottom: 2.5rem; line-height: 1.8; }
+    .contact-detail { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .cd-icon { width: 42px; height: 42px; background: rgba(0,212,216,0.1); border: 1px solid rgba(0,212,216,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cd-text strong { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .cd-text span { font-size: 0.92rem; color: var(--white-dim); }
+    .contact-form-box { background: var(--black-3); border: 1px solid rgba(0,212,216,0.15); padding: 2.5rem; }
+    .contact-form-box h3 { font-family: var(--fd); font-size: 1.7rem; margin-bottom: 1.8rem; }
+    .contact-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* FOOTER */
+    footer { background: var(--black); border-top: 1px solid rgba(0,212,216,0.1); padding: 4rem 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { font-size: 0.88rem; color: var(--white-dim); line-height: 1.8; margin: 1rem 0 1.5rem; }
+    .footer-socials { display: flex; gap: 0.8rem; }
+    .social-btn { width: 38px; height: 38px; background: rgba(0,212,216,0.08); border: 1px solid rgba(0,212,216,0.2); display: flex; align-items: center; justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.25s; }
+    .social-btn:hover { background: var(--gold); color: var(--black); }
+    .footer-col h4 { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight: 600; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul li a { text-decoration: none; color: var(--white-dim); font-size: 0.88rem; transition: color 0.3s; cursor: pointer; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.82rem; color: var(--white-dim); }
+
+    /* WA FLOAT */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 200; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s; animation: pulse-wa 2.5s ease-in-out infinite; }
+    .wa-float:hover { transform: scale(1.12); animation: none; }
+    .wa-tooltip { position: absolute; right: 68px; background: var(--black-3); border: 1px solid rgba(0,212,216,0.2); padding: 0.5rem 1rem; font-size: 0.78rem; white-space: nowrap; color: var(--white); opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeLeft { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: none; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes pulse-wa { 0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7); } }
+
+    @media (max-width: 1024px) {
+      .hero-content, .about-grid, .booking-wrap, .contact-wrap, .faqs-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-visual { display: none; }
+      .services-grid, .testimonials-grid, .pricing-grid, .team-grid { grid-template-columns: repeat(2,1fr); }
+      .products-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .about-badge { left: 0; }
+    }
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      .nav-links, .nav-cta-wrap { display: none; }
+      .hamburger { display: flex; }
+      .services-grid, .testimonials-grid, .pricing-grid, .team-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item.large { grid-column: span 2; grid-row: span 1; height: 160px; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .tile-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-top { grid-template-columns: 1fr; }
+      .contact-row2 { grid-template-columns: 1fr; }
+      #about,#services,#booking,#products,#gallery,#testimonials,#pricing,#faqs,#team,#contact { padding: 5rem 0; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.8rem; }
+      .section-title { font-size: 2.1rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .about-features { grid-template-columns: 1fr; }
+      .form-nav { flex-direction: column; }
+      .form-nav .btn, .form-nav .btn-back { width: 100%; flex: 1 !important; }
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="goSection('home')">
+      <div class="logo-top">Learned<span style="color:var(--white)">Electronics</span></div>
+      <div class="logo-sub">Trusted Repairs · Kenya</div>
+    </div>
+    <ul class="nav-links">
+      <li><a onclick="goSection('about')">About</a></li>
+      <li><a onclick="goSection('services')">Services</a></li>
+      <li><a onclick="goSection('products')">Shop</a></li>
+      <li><a onclick="goSection('pricing')">Pricing</a></li>
+      <li><a onclick="goSection('faqs')">FAQs</a></li>
+      <li><a onclick="goSection('contact')">Contact</a></li>
+    </ul>
+    <div class="nav-cta-wrap" style="display:flex;">
+      <button class="btn btn-gold" onclick="goSection('booking')" style="padding:.65rem 1.4rem;font-size:.88rem;">Book Repair</button>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="closeMenu">✕</button>
+  <a onclick="mGoSection('about')">About</a>
+  <a onclick="mGoSection('services')">Services</a>
+  <a onclick="mGoSection('products')">Shop</a>
+  <a onclick="mGoSection('booking')">Book Repair</a>
+  <a onclick="mGoSection('pricing')">Pricing</a>
+  <a onclick="mGoSection('contact')">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home" style="min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:5rem;">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="container" style="position:relative;z-index:2;width:100%;">
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow"><span>Nairobi's Premier Electronics Specialist</span></div>
+        <h1 class="hero-title">We Fix Your<br/><em>Broken</em><br/>Electronics</h1>
+        <p class="hero-sub">Phones, laptops, computers — professionally diagnosed and repaired. Tell us your problem in 60 seconds and we'll handle the rest.</p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" onclick="goSection('booking')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+            Diagnose My Device
+          </button>
+          <a href="https://wa.me/254769319099" class="btn btn-outline" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.12 1.528 5.849L.057 23.05a.5.5 0 00.614.614l5.188-1.464A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.001-1.367l-.358-.214-3.714 1.048 1.063-3.618-.234-.371A9.818 9.818 0 112 12c0 5.416 4.402 9.818 9.818 9.818H12z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Devices Repaired</div></div>
+          <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Fast Turnaround</div></div>
+          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction</div></div>
+        </div>
+      </div>
+      <!-- Hero Visual -->
+      <div class="hero-visual">
+        <div class="device-scene">
+          <div class="device-laptop">
+            <div class="laptop-screen-wrap">
+              <div class="laptop-bar">
+                <div class="lbar-dot" style="background:#ff5f57;"></div>
+                <div class="lbar-dot" style="background:#febc2e;"></div>
+                <div class="lbar-dot" style="background:#28c840;"></div>
+              </div>
+              <div class="laptop-screen-content">
+                <div class="lsc-inner">
+                  <div class="lsc-logo">Learned Electronics</div>
+                  <div class="lsc-bar"></div>
+                  <div class="lsc-bar2"></div>
+                  <div class="lsc-pct">98%</div>
+                  <div class="lsc-lbl">Repair Progress</div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+          <div class="device-phone">
+            <div class="phone-notch"></div>
+            <div class="phone-body">
+              <div class="phone-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="phone-bars"><div class="pbar"></div><div class="pbar"></div><div class="pbar"></div></div>
+            </div>
+          </div>
+          <div class="tool-badge"><div class="tbdot"></div><div class="tbtext">Available Now</div></div>
+          <div class="wrench-badge">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding:8rem 0;position:relative;">
+  <div style="position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent,var(--gold),transparent);"></div>
+  <div class="container">
+    <div class="about-grid">
+      <div style="position:relative;" class="reveal">
+        <div class="about-img-box">
+          <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:82%;height:82%;">
+            <rect x="10" y="300" width="280" height="12" rx="2" fill="#2a2a2a" stroke="#00D4D8" stroke-width="0.5" stroke-opacity="0.4"/>
+            <rect x="40" y="170" width="160" height="130" rx="4" fill="#1a1a1a" stroke="#00D4D8" stroke-width="0.8" stroke-opacity="0.5"/>
+            <rect x="55" y="100" width="130" height="85" rx="3" fill="#0d1117" stroke="#00D4D8" stroke-width="0.8" stroke-opacity="0.6"/>
+            <rect x="60" y="106" width="120" height="73" rx="2" fill="#111827"/>
+            <rect x="68" y="118" width="60" height="4" rx="2" fill="#00D4D8" opacity="0.7"/>
+            <rect x="68" y="126" width="100" height="3" rx="1" fill="#00D4D8" opacity="0.25"/>
+            <rect x="68" y="132" width="80" height="3" rx="1" fill="#00D4D8" opacity="0.18"/>
+            <rect x="68" y="138" width="90" height="3" rx="1" fill="#00D4D8" opacity="0.22"/>
+            <text x="68" y="165" font-family="monospace" font-size="6" fill="#22c55e" opacity="0.8">● Repair Complete: 98%</text>
+            <rect x="55" y="184" width="130" height="4" rx="1" fill="#333"/>
+            <rect x="55" y="195" width="130" height="8" rx="1" fill="#222"/>
+            <rect x="60" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="71" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="82" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="93" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="104" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="115" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="126" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="137" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="148" y="197" width="8" height="4" rx="0.5" fill="#2a2a2a" stroke="#444" stroke-width="0.3"/>
+            <rect x="220" y="245" width="55" height="45" rx="6" fill="#1a1a1a" stroke="#00D4D8" stroke-width="0.8" stroke-opacity="0.7"/>
+            <rect x="225" y="250" width="45" height="32" rx="2" fill="#0d1117"/>
+            <circle cx="247" cy="292" r="3" fill="#333"/>
+            <line x1="230" y1="255" x2="240" y2="270" stroke="#00D4D8" stroke-width="0.6" opacity="0.5"/>
+            <line x1="240" y1="270" x2="235" y2="280" stroke="#00D4D8" stroke-width="0.6" opacity="0.5"/>
+            <rect x="218" y="172" width="5" height="58" rx="2" fill="#555" transform="rotate(-20 218 172)"/>
+            <rect x="219" y="167" width="5" height="14" rx="1" fill="#00D4D8" opacity="0.8" transform="rotate(-20 219 167)"/>
+            <rect x="215" y="280" width="60" height="20" rx="3" fill="#2a2a2a" stroke="#00D4D8" stroke-width="0.5" stroke-opacity="0.3"/>
+            <circle cx="235" cy="290" r="6" fill="#333" stroke="#00D4D8" stroke-width="0.5" stroke-opacity="0.5"/>
+            <rect x="248" y="283" width="20" height="5" rx="2" fill="#00D4D8" opacity="0.25"/>
+            <circle cx="185" cy="230" r="18" fill="none" stroke="#00D4D8" stroke-width="1" stroke-opacity="0.5"/>
+            <circle cx="185" cy="230" r="14" fill="rgba(0,212,216,0.04)"/>
+            <line x1="197" y1="242" x2="207" y2="254" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="148" cy="150" r="40" fill="rgba(0,212,216,0.04)"/>
+          </svg>
+        </div>
+        <div class="about-accent"></div>
+        <div class="about-badge"><strong>5+</strong><span>Yrs Experience</span></div>
+      </div>
+      <div class="reveal">
+        <span class="section-label">About Learned Electronics</span>
+        <h2 class="section-title">Your Trusted Repair Expert in Kenya</h2>
+        <div class="divider"></div>
+        <p style="color:var(--white-dim);font-size:.95rem;margin-bottom:1.5rem;line-height:1.85;">At Learned Electronics, we combine technical expertise with a passion for bringing your devices back to life. From cracked screens to complex motherboard repairs, our skilled technician handles every job with precision and care.</p>
+        <p style="color:var(--white-dim);font-size:.95rem;margin-bottom:2rem;line-height:1.85;">We believe in transparency — before any repair begins, we diagnose your device and give you a clear quote. No hidden fees, no surprises.</p>
+        <div class="about-features">
+          <div class="about-feat"><div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feat-text"><strong>Genuine Parts</strong><span>Quality components for lasting repairs</span></div></div>
+          <div class="about-feat"><div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="feat-text"><strong>Fast Service</strong><span>Most repairs done same-day</span></div></div>
+          <div class="about-feat"><div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="feat-text"><strong>Easy Access</strong><span>Conveniently located in Kenya</span></div></div>
+          <div class="about-feat"><div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg></div><div class="feat-text"><strong>Warranty</strong><span>All repairs backed by warranty</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding:8rem 0;background:var(--black-2);">
+  <div class="container">
+    <div class="services-header reveal"><span class="section-label">What We Fix</span><h2 class="section-title">Our Repair Services</h2><div class="divider"></div></div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-num">01</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="12" y="4" width="24" height="40" rx="4" stroke="#00D4D8" stroke-width="1.8"/><rect x="16" y="8" width="16" height="26" rx="1" fill="rgba(0,212,216,0.08)" stroke="#00D4D8" stroke-width="0.8" stroke-opacity="0.4"/><circle cx="24" cy="39" r="2" stroke="#00D4D8" stroke-width="1.5"/><line x1="20" y1="6.5" x2="28" y2="6.5" stroke="#00D4D8" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3 class="service-title">Phone Repairs</h3><p class="service-desc">From screen replacements to charging port fixes — we handle all major phone brands.</p>
+        <ul class="service-items"><li>Screen & LCD replacement</li><li>Battery replacement</li><li>Camera & speaker repairs</li><li>Water damage recovery</li><li>Software & unlock services</li></ul>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.1s;"><div class="service-num">02</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="2" stroke="#00D4D8" stroke-width="1.8"/><rect x="9" y="13" width="30" height="17" rx="1" fill="rgba(0,212,216,0.07)" stroke="#00D4D8" stroke-width="0.7" stroke-opacity="0.4"/><rect x="2" y="34" width="44" height="4" rx="2" stroke="#00D4D8" stroke-width="1.5"/><rect x="18" y="35" width="12" height="2" rx="1" fill="#00D4D8" opacity="0.4"/><line x1="14" y1="19" x2="34" y2="19" stroke="#00D4D8" stroke-width="0.8" stroke-opacity="0.5"/></svg>
+        <h3 class="service-title">Laptop Repairs</h3><p class="service-desc">Professional laptop diagnostics, hardware repair and performance upgrades.</p>
+        <ul class="service-items"><li>Screen replacement</li><li>Keyboard & trackpad fixes</li><li>Motherboard repair</li><li>RAM & SSD upgrades</li><li>Cooling system service</li></ul>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.2s;"><div class="service-num">03</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="6" width="40" height="28" rx="3" stroke="#00D4D8" stroke-width="1.8"/><rect x="8" y="10" width="32" height="20" rx="1" fill="rgba(0,212,216,0.07)" stroke="#00D4D8" stroke-width="0.7" stroke-opacity="0.4"/><line x1="24" y1="34" x2="24" y2="40" stroke="#00D4D8" stroke-width="1.8"/><rect x="12" y="40" width="24" height="3" rx="1" stroke="#00D4D8" stroke-width="1.5"/></svg>
+        <h3 class="service-title">Computer Repairs</h3><p class="service-desc">Desktop PCs, all-in-ones — hardware faults, upgrades, and OS reinstalls.</p>
+        <ul class="service-items"><li>Hardware diagnostics</li><li>OS installation & recovery</li><li>Virus removal</li><li>Network & WiFi setup</li><li>Component upgrades</li></ul>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.1s;"><div class="service-num">04</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="22" rx="8" stroke="#00D4D8" stroke-width="1.8"/><line x1="20" y1="25" x2="26" y2="25" stroke="#00D4D8" stroke-width="1.8" stroke-linecap="round"/><line x1="23" y1="22" x2="23" y2="28" stroke="#00D4D8" stroke-width="1.8" stroke-linecap="round"/><circle cx="32" cy="23" r="1.5" fill="#00D4D8"/><circle cx="36" cy="26" r="1.5" fill="#00D4D8" opacity="0.6"/><circle cx="34" cy="29" r="1.5" fill="#00D4D8" opacity="0.4"/></svg>
+        <h3 class="service-title">Gaming Devices</h3><p class="service-desc">Console repairs and peripheral fixes to get you back in the game.</p>
+        <ul class="service-items"><li>Console HDMI repair</li><li>Controller fixes</li><li>Disc drive issues</li><li>Overheating solutions</li></ul>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.2s;"><div class="service-num">05</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="10" y="6" width="28" height="36" rx="4" stroke="#00D4D8" stroke-width="1.8"/><rect x="14" y="10" width="20" height="22" rx="1" fill="rgba(0,212,216,0.07)" stroke="#00D4D8" stroke-width="0.7" stroke-opacity="0.4"/><circle cx="24" cy="38" r="2" stroke="#00D4D8" stroke-width="1.5"/></svg>
+        <h3 class="service-title">Smart Devices</h3><p class="service-desc">Tablets, smartwatches and other portable electronics expertly handled.</p>
+        <ul class="service-items"><li>Tablet screen repair</li><li>Smartwatch battery swap</li><li>Charging port repair</li><li>Software troubleshooting</li></ul>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.3s;"><div class="service-num">06</div>
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="12" rx="16" ry="6" stroke="#00D4D8" stroke-width="1.8"/><path d="M8 12v10c0 3.3 7.2 6 16 6s16-2.7 16-6V12" stroke="#00D4D8" stroke-width="1.8"/><path d="M8 22v10c0 3.3 7.2 6 16 6s16-2.7 16-6V22" stroke="#00D4D8" stroke-width="1.8"/></svg>
+        <h3 class="service-title">Data & Recovery</h3><p class="service-desc">Recover precious data from damaged or corrupted devices.</p>
+        <ul class="service-items"><li>Data recovery service</li><li>Backup solutions</li><li>Cloud setup assistance</li><li>Data transfer</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" style="padding:8rem 0;background:var(--black);">
+  <div class="container">
+    <div class="booking-wrap">
+      <div class="booking-info reveal">
+        <span class="section-label">Book a Repair</span>
+        <h2 class="section-title">Tell Us Your Device Problem</h2>
+        <div class="divider"></div>
+        <p>Fill in our quick 4-step form so we understand exactly what you need before we meet. No back-and-forth — just solutions.</p>
+        <div class="booking-step"><div class="step-num">1</div><div class="step-text"><strong>Select Your Device</strong><span>Choose the type and brand of device with the issue</span></div></div>
+        <div class="booking-step"><div class="step-num">2</div><div class="step-text"><strong>Describe the Problem</strong><span>Pick from common issues or describe your specific fault</span></div></div>
+        <div class="booking-step"><div class="step-num">3</div><div class="step-text"><strong>Your Location & Urgency</strong><span>Let us know where you are and how soon you need help</span></div></div>
+        <div class="booking-step"><div class="step-num">4</div><div class="step-text"><strong>Your Contact Details</strong><span>We'll reach out via WhatsApp with a quote and next steps</span></div></div>
+      </div>
+      <div class="diag-form reveal" style="transition-delay:.2s;">
+        <h3>Device Diagnostic Form</h3>
+        <p>Complete all steps so we can prepare your repair estimate before we meet.</p>
+        <div class="form-progress">
+          <div class="prog-step active" id="ps1"><div class="prog-dot">1</div><div class="prog-label">Device</div></div>
+          <div class="prog-line" id="pl1"></div>
+          <div class="prog-step" id="ps2"><div class="prog-dot">2</div><div class="prog-label">Problem</div></div>
+          <div class="prog-line" id="pl2"></div>
+          <div class="prog-step" id="ps3"><div class="prog-dot">3</div><div class="prog-label">Location</div></div>
+          <div class="prog-line" id="pl3"></div>
+          <div class="prog-step" id="ps4"><div class="prog-dot">4</div><div class="prog-label">Contact</div></div>
+        </div>
+        <!-- Step 1 -->
+        <div class="form-step active" id="step1">
+          <p style="font-size:.85rem;color:var(--white-dim);margin-bottom:1rem;">What type of device has a problem?</p>
+          <div class="tile-grid" id="deviceType">
+            <div class="tile" data-val="Smartphone" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="8" y="2" width="16" height="28" rx="3"/><circle cx="16" cy="26" r="1.2"/><line x1="13" y1="4.5" x2="19" y2="4.5" stroke-linecap="round"/></svg><div class="tile-label">Smartphone</div></div>
+            <div class="tile" data-val="Laptop" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="4" y="6" width="24" height="16" rx="2"/><rect x="6" y="8" width="20" height="12" rx="1" fill="rgba(0,212,216,0.08)"/><rect x="1" y="22" width="30" height="3" rx="1"/></svg><div class="tile-label">Laptop</div></div>
+            <div class="tile" data-val="Desktop PC" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="2" y="4" width="28" height="18" rx="2"/><line x1="16" y1="22" x2="16" y2="27"/><line x1="8" y1="27" x2="24" y2="27"/></svg><div class="tile-label">Desktop PC</div></div>
+            <div class="tile" data-val="Tablet" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="5" y="2" width="22" height="28" rx="3"/><rect x="8" y="5" width="16" height="20" rx="1" fill="rgba(0,212,216,0.08)"/><circle cx="16" cy="28" r="1"/></svg><div class="tile-label">Tablet</div></div>
+            <div class="tile" data-val="Gaming Console" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="4" y="10" width="24" height="14" rx="6"/><line x1="13" y1="17" x2="17" y2="17"/><line x1="15" y1="15" x2="15" y2="19"/><circle cx="21" cy="15" r="1"/><circle cx="23" cy="18" r="1"/></svg><div class="tile-label">Console</div></div>
+            <div class="tile" data-val="Other" onclick="selTile(this,'deviceType')"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><line x1="16" y1="10" x2="16" y2="16"/><line x1="16" y1="16" x2="21" y2="16"/></svg><div class="tile-label">Other</div></div>
+          </div>
+          <div class="form-row"><label>Device Brand / Model</label><input type="text" id="deviceModel" placeholder="e.g. Samsung Galaxy S21, HP Laptop 15s..."/></div>
+          <div class="form-nav"><button class="btn btn-gold" onclick="nextStep(1)">Next: Describe Problem →</button></div>
+        </div>
+        <!-- Step 2 -->
+        <div class="form-step" id="step2">
+          <p style="font-size:.85rem;color:var(--white-dim);margin-bottom:1rem;">What is the main issue? (Select all that apply)</p>
+          <div class="tile-grid" id="problemType">
+            <div class="tile" data-val="Broken Screen" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="4" y="2" width="24" height="28" rx="3"/><line x1="12" y1="8" x2="20" y2="18"/><line x1="12" y1="8" x2="10" y2="16" opacity=".5"/><line x1="20" y1="18" x2="22" y2="26" opacity=".5"/></svg><div class="tile-label">Broken Screen</div></div>
+            <div class="tile" data-val="Battery Issue" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="4" y="10" width="22" height="12" rx="2"/><path d="M26 14v4"/><rect x="7" y="13" width="8" height="6" rx="1" fill="rgba(0,212,216,0.3)"/></svg><div class="tile-label">Battery Issue</div></div>
+            <div class="tile" data-val="Won't Charge" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><line x1="16" y1="4" x2="10" y2="18" stroke-linecap="round"/><line x1="10" y1="18" x2="16" y2="18"/><line x1="16" y1="18" x2="10" y2="28" stroke-linecap="round"/></svg><div class="tile-label">Won't Charge</div></div>
+            <div class="tile" data-val="Water Damage" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><path d="M16 4c0 0-10 10-10 17a10 10 0 0020 0C26 21 16 4 16 4z"/></svg><div class="tile-label">Water Damage</div></div>
+            <div class="tile" data-val="Software / OS" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><rect x="4" y="6" width="24" height="20" rx="2"/><polyline points="9,14 13,18 9,22"/><line x1="15" y1="22" x2="23" y2="22"/></svg><div class="tile-label">Software / OS</div></div>
+            <div class="tile" data-val="Slow / Freezing" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><circle cx="16" cy="16" r="12"/><polyline points="16 10 16 16 20 16"/></svg><div class="tile-label">Slow / Freezing</div></div>
+            <div class="tile" data-val="Camera / Mic" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><path d="M20 8H6a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V10a2 2 0 00-2-2z"/><polygon points="22,11 28,8 28,24 22,21"/></svg><div class="tile-label">Camera / Mic</div></div>
+            <div class="tile" data-val="Won't Power On" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><path d="M12 6v10"/><path d="M8 9.5A10 10 0 1024 9.5"/></svg><div class="tile-label">Won't Power On</div></div>
+            <div class="tile" data-val="Other Issue" onclick="selTile(this,'problemType',true)"><svg class="tile-svg" viewBox="0 0 32 32" fill="none" stroke="#00D4D8" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg><div class="tile-label">Other</div></div>
+          </div>
+          <div class="form-row"><label>Describe the problem in your own words</label><textarea id="problemDesc" placeholder="e.g. My phone screen cracked after it fell. The display still works but has lines across it..."></textarea></div>
+          <div class="form-nav"><button class="btn btn-back btn" onclick="prevStep(2)">← Back</button><button class="btn btn-gold" onclick="nextStep(2)">Next: Location →</button></div>
+        </div>
+        <!-- Step 3 -->
+        <div class="form-step" id="step3">
+          <div class="form-row"><label>Your Location / Area in Kenya</label><input type="text" id="location" placeholder="e.g. Westlands, Nairobi / Kisumu Town..."/></div>
+          <div class="form-row"><label>Preferred Service</label><select id="serviceType"><option value="">Select service type...</option><option>Drop-in to shop</option><option>Home / Office Pickup</option><option>On-site Repair</option></select></div>
+          <div class="form-row"><label>How urgent is your repair?</label></div>
+          <div class="urgency-row" id="urgencyRow">
+            <button class="urgency-btn" onclick="selUrgency(this,'Same Day')">🔴 Same Day</button>
+            <button class="urgency-btn" onclick="selUrgency(this,'1-2 Days')">🟡 1–2 Days</button>
+            <button class="urgency-btn" onclick="selUrgency(this,'Flexible')">🟢 Flexible</button>
+          </div>
+          <div class="form-nav"><button class="btn btn-back btn" onclick="prevStep(3)">← Back</button><button class="btn btn-gold" onclick="nextStep(3)">Next: Contact →</button></div>
+        </div>
+        <!-- Step 4 -->
+        <div class="form-step" id="step4">
+          <div class="form-row"><label>Your Full Name</label><input type="text" id="clientName" placeholder="John Mwangi"/></div>
+          <div class="form-row"><label>WhatsApp / Phone Number</label><input type="tel" id="clientPhone" placeholder="+254 7XX XXX XXX"/></div>
+          <div class="form-row"><label>Email (Optional)</label><input type="email" id="clientEmail" placeholder="john@email.com"/></div>
+          <div class="form-nav"><button class="btn btn-back btn" onclick="prevStep(4)">← Back</button><button class="btn btn-gold" onclick="submitBooking()">✓ Submit Booking</button></div>
+        </div>
+        <!-- Success -->
+        <div class="form-success" id="formSuccess">
+          <div class="check-circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h4>Booking Received!</h4>
+          <p>We've noted your device details and will contact you via WhatsApp within 1 hour with your repair quote and next steps.</p>
+          <a href="https://wa.me/254769319099" class="btn btn-gold" target="_blank" rel="noopener">💬 Chat on WhatsApp Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" style="padding:8rem 0;background:var(--black-2);">
+  <div class="container">
+    <div class="products-header">
+      <div class="reveal"><span class="section-label">Parts & Accessories</span><h2 class="section-title">Our Shop</h2></div>
+      <div class="products-filter reveal">
+        <button class="filter-btn active" onclick="filterProd(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterProd(this,'screens')">Screens</button>
+        <button class="filter-btn" onclick="filterProd(this,'batteries')">Batteries</button>
+        <button class="filter-btn" onclick="filterProd(this,'accessories')">Accessories</button>
+      </div>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" data-cat="screens"><div class="product-img"><span class="product-badge">Popular</span><svg viewBox="0 0 80 80" fill="none"><rect x="22" y="8" width="36" height="64" rx="5" stroke="#00D4D8" stroke-width="1.5"/><rect x="26" y="14" width="28" height="46" rx="2" fill="rgba(0,212,216,0.07)"/><circle cx="40" cy="64" r="2.5" stroke="#00D4D8" stroke-width="1.2"/><line x1="35" y1="11" x2="45" y2="11" stroke="#00D4D8" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="product-info"><div class="product-name">iPhone Screen Assembly</div><div class="product-cat">Replacement Screens</div><div class="product-bottom"><div class="product-price">KSh 3,500</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="screens" style="transition-delay:.05s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="18" y="8" width="44" height="64" rx="5" stroke="#00D4D8" stroke-width="1.5"/><rect x="22" y="14" width="36" height="50" rx="2" fill="rgba(0,212,216,0.07)"/><circle cx="40" cy="68" r="2.5" stroke="#00D4D8" stroke-width="1.2"/></svg></div><div class="product-info"><div class="product-name">Samsung AMOLED Display</div><div class="product-cat">Replacement Screens</div><div class="product-bottom"><div class="product-price">KSh 4,200</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="batteries" style="transition-delay:.1s;"><div class="product-img"><span class="product-badge">New</span><svg viewBox="0 0 80 80" fill="none"><rect x="14" y="28" width="46" height="24" rx="3" stroke="#00D4D8" stroke-width="1.5"/><path d="M60 35v10" stroke="#00D4D8" stroke-width="2" stroke-linecap="round"/><rect x="19" y="33" width="20" height="14" rx="2" fill="rgba(0,212,216,0.3)"/></svg></div><div class="product-info"><div class="product-name">Universal Laptop Battery</div><div class="product-cat">Batteries</div><div class="product-bottom"><div class="product-price">KSh 5,800</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="batteries" style="transition-delay:.15s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="20" y="28" width="36" height="24" rx="3" stroke="#00D4D8" stroke-width="1.5"/><path d="M56 34v12" stroke="#00D4D8" stroke-width="2.5" stroke-linecap="round"/><rect x="24" y="33" width="16" height="14" rx="1" fill="rgba(0,212,216,0.35)"/></svg></div><div class="product-info"><div class="product-name">iPhone Battery (OEM)</div><div class="product-cat">Batteries</div><div class="product-bottom"><div class="product-price">KSh 1,800</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="accessories" style="transition-delay:.1s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="30" y="10" width="20" height="30" rx="3" stroke="#00D4D8" stroke-width="1.5"/><line x1="40" y1="40" x2="40" y2="55" stroke="#00D4D8" stroke-width="1.5"/><rect x="28" y="55" width="24" height="16" rx="3" stroke="#00D4D8" stroke-width="1.5"/><circle cx="40" cy="63" r="4" stroke="#00D4D8" stroke-width="1.2" fill="rgba(0,212,216,0.1)"/></svg></div><div class="product-info"><div class="product-name">USB-C Fast Charger 65W</div><div class="product-cat">Accessories</div><div class="product-bottom"><div class="product-price">KSh 1,200</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="accessories" style="transition-delay:.15s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="15" y="15" width="50" height="50" rx="3" stroke="#00D4D8" stroke-width="1.5"/><rect x="19" y="19" width="42" height="42" rx="2" fill="rgba(0,212,216,0.06)"/><polyline points="32,40 38,46 48,34" stroke="#00D4D8" stroke-width="1.5" stroke-linecap="round" opacity=".7"/></svg></div><div class="product-info"><div class="product-name">Tempered Glass Screen Protector</div><div class="product-cat">Accessories</div><div class="product-bottom"><div class="product-price">KSh 350</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="screens" style="transition-delay:.2s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="10" y="18" width="60" height="38" rx="3" stroke="#00D4D8" stroke-width="1.5"/><rect x="14" y="22" width="52" height="30" rx="2" fill="rgba(0,212,216,0.07)"/><line x1="40" y1="56" x2="40" y2="64" stroke="#00D4D8" stroke-width="1.5"/><rect x="22" y="64" width="36" height="4" rx="2" stroke="#00D4D8" stroke-width="1.2"/></svg></div><div class="product-info"><div class="product-name">Laptop LCD Screen 15.6"</div><div class="product-cat">Replacement Screens</div><div class="product-bottom"><div class="product-price">KSh 8,500</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+      <div class="product-card reveal" data-cat="accessories" style="transition-delay:.25s;"><div class="product-img"><svg viewBox="0 0 80 80" fill="none"><rect x="28" y="28" width="24" height="38" rx="3" stroke="#00D4D8" stroke-width="1.5" fill="rgba(0,212,216,0.05)"/><rect x="34" y="10" width="12" height="20" rx="3" stroke="#00D4D8" stroke-width="1.5"/><rect x="32" y="36" width="16" height="10" rx="1" fill="rgba(0,212,216,0.2)"/></svg></div><div class="product-info"><div class="product-name">Precision Repair Toolkit</div><div class="product-cat">Tools & Kits</div><div class="product-bottom"><div class="product-price">KSh 2,500</div><button class="add-cart" onclick="addCart(this)">+</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding:8rem 0;background:var(--black);">
+  <div class="container">
+    <div class="gallery-header reveal"><span class="section-label">Our Work</span><h2 class="section-title">Repair Portfolio</h2><div class="divider"></div></div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item large"><svg viewBox="0 0 220 220" fill="none" width="70%" height="70%"><rect x="30" y="50" width="160" height="120" rx="5" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5" fill="rgba(0,212,216,.04)"/><rect x="44" y="64" width="132" height="92" rx="2" stroke="#00D4D8" stroke-width=".8" stroke-opacity=".3"/><circle cx="90" cy="130" r="20" stroke="#00D4D8" stroke-width="1.2" stroke-opacity=".5"/><circle cx="130" cy="100" r="12" stroke="#00D4D8" stroke-width="1.2" stroke-opacity=".4"/><line x1="80" y1="80" x2="160" y2="80" stroke="#00D4D8" stroke-width=".8" stroke-opacity=".25"/><path d="M60 110 L80 90 L100 105 L120 85 L140 100" stroke="#00D4D8" stroke-width="1" stroke-opacity=".4"/><text x="44" y="172" font-family="monospace" font-size="8" fill="#00D4D8" opacity=".5">Motherboard Repair</text></svg><div class="gallery-overlay"><span>Motherboard Repair</span></div></div>
+      <div class="gallery-item"><svg viewBox="0 0 100 100" fill="none" width="60%" height="60%"><rect x="25" y="8" width="50" height="84" rx="5" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5"/><rect x="29" y="14" width="42" height="66" rx="2" fill="rgba(0,212,216,.06)"/><line x1="35" y1="35" x2="55" y2="55" stroke="#00D4D8" stroke-width="1" stroke-opacity=".5"/><line x1="35" y1="35" x2="32" y2="48" stroke="#00D4D8" stroke-width="1" stroke-opacity=".4"/><line x1="55" y1="55" x2="58" y2="68" stroke="#00D4D8" stroke-width="1" stroke-opacity=".4"/></svg><div class="gallery-overlay"><span>Screen Replacement</span></div></div>
+      <div class="gallery-item"><svg viewBox="0 0 100 100" fill="none" width="60%" height="60%"><rect x="8" y="20" width="84" height="50" rx="3" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5"/><rect x="12" y="24" width="76" height="42" rx="2" fill="rgba(0,212,216,.06)"/><rect x="4" y="70" width="92" height="8" rx="2" stroke="#00D4D8" stroke-width="1.2" stroke-opacity=".4"/></svg><div class="gallery-overlay"><span>Laptop Service</span></div></div>
+      <div class="gallery-item"><svg viewBox="0 0 100 100" fill="none" width="55%" height="55%"><rect x="20" y="28" width="52" height="28" rx="3" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5"/><path d="M72 37v10" stroke="#00D4D8" stroke-width="2" stroke-linecap="round" opacity=".6"/><rect x="26" y="34" width="24" height="16" rx="2" fill="rgba(0,212,216,.25)"/></svg><div class="gallery-overlay"><span>Battery Replacement</span></div></div>
+      <div class="gallery-item"><svg viewBox="0 0 100 100" fill="none" width="60%" height="60%"><rect x="8" y="12" width="84" height="60" rx="4" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5"/><line x1="50" y1="72" x2="50" y2="84" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".4"/><line x1="25" y1="84" x2="75" y2="84" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".4"/></svg><div class="gallery-overlay"><span>Desktop Repair</span></div></div>
+      <div class="gallery-item"><svg viewBox="0 0 100 100" fill="none" width="55%" height="55%"><path d="M50 18c0 0-24 22-24 40a24 24 0 0048 0C74 40 50 18 50 18z" stroke="#00D4D8" stroke-width="1.5" stroke-opacity=".5"/><line x1="38" y1="62" x2="62" y2="62" stroke="#00D4D8" stroke-width="1.2" stroke-opacity=".4"/></svg><div class="gallery-overlay"><span>Water Damage Recovery</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;"><p style="font-size:.88rem;color:var(--white-dim);margin-bottom:1.2rem;">Real repair photos coming soon. Message us on WhatsApp to see our work.</p><a href="https://wa.me/254769319099" class="btn btn-outline" target="_blank" rel="noopener">View More on WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding:8rem 0;background:var(--black-2);">
+  <div class="container">
+    <div class="testimonials-header reveal"><span class="section-label">Client Reviews</span><h2 class="section-title">What Our Clients Say</h2><div class="divider"></div></div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">My iPhone screen was shattered after a fall. Learned Electronics fixed it within hours and it looks brand new. Highly recommend!</p><div class="testi-author"><div class="testi-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div><div class="testi-name">Amina K.</div><div class="testi-device">iPhone 13 – Screen Repair</div></div></div></div>
+      <div class="testi-card reveal" style="transition-delay:.1s;"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Brought my HP laptop that wouldn't power on. They diagnosed the issue quickly and had it running again the same afternoon. Incredible service!</p><div class="testi-author"><div class="testi-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div><div class="testi-name">Brian M.</div><div class="testi-device">HP Laptop – No Power Issue</div></div></div></div>
+      <div class="testi-card reveal" style="transition-delay:.2s;"><div class="testi-quote">"</div><div class="testi-stars">★★★★★</div><p class="testi-text">Very professional, honest pricing and quick turnaround. My Samsung was water damaged and I thought it was gone forever — they saved it!</p><div class="testi-author"><div class="testi-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div><div class="testi-name">Grace W.</div><div class="testi-device">Samsung A52 – Water Damage</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding:8rem 0;background:var(--black);">
+  <div class="container">
+    <div class="pricing-header reveal"><span class="section-label">Transparent Pricing</span><h2 class="section-title">Repair Cost Estimates</h2><div class="divider"></div><p style="color:var(--white-dim);font-size:.92rem;max-width:550px;margin:0 auto;">Final pricing depends on device model and parts. Book a diagnostic for your exact quote — no hidden fees.</p></div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal"><div class="pricing-tier">Smartphones</div><div class="pricing-device">Phone Repairs</div><div class="pricing-range">KSh 500 – 8K</div><div class="pricing-note">Based on model & repair type</div><ul class="pricing-list"><li>Screen replacement: KSh 1,500 – 8,000</li><li>Battery swap: KSh 800 – 2,500</li><li>Charging port: KSh 500 – 1,500</li><li>Camera repair: KSh 1,000 – 3,000</li><li>Water damage: KSh 2,000+</li></ul><button class="btn btn-outline" style="width:100%;" onclick="goSection('booking')">Get My Quote</button></div>
+      <div class="pricing-card featured reveal" style="transition-delay:.1s;"><div class="pricing-badge">Most Popular</div><div class="pricing-tier">Laptops</div><div class="pricing-device">Laptop Repairs</div><div class="pricing-range">KSh 1K – 15K</div><div class="pricing-note">Hardware & software included</div><ul class="pricing-list"><li>Screen replacement: KSh 5,000 – 15,000</li><li>Keyboard repair: KSh 1,500 – 4,000</li><li>RAM upgrade: KSh 1,000 – 3,500</li><li>SSD upgrade: KSh 3,500 – 8,000</li><li>OS installation: KSh 1,000 – 2,000</li></ul><button class="btn btn-gold" style="width:100%;" onclick="goSection('booking')">Get My Quote</button></div>
+      <div class="pricing-card reveal" style="transition-delay:.2s;"><div class="pricing-tier">Computers</div><div class="pricing-device">Desktop Repairs</div><div class="pricing-range">KSh 500 – 10K</div><div class="pricing-note">Diagnostics always free</div><ul class="pricing-list"><li>Diagnostics: Free</li><li>OS reinstall: KSh 1,000 – 2,000</li><li>Virus removal: KSh 1,500</li><li>Hardware repair: KSh 2,000+</li><li>Upgrades: KSh 500 – 10,000</li></ul><button class="btn btn-outline" style="width:100%;" onclick="goSection('booking')">Get My Quote</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section id="faqs" style="padding:8rem 0;background:var(--black-2);">
+  <div class="container">
+    <div class="faqs-wrap">
+      <div class="reveal"><span class="section-label">FAQs</span><h2 class="section-title">Common Questions</h2><div class="divider"></div><p style="color:var(--white-dim);font-size:.92rem;line-height:1.8;margin-bottom:2rem;">Still have questions? We're happy to help via WhatsApp anytime.</p><a href="https://wa.me/254769319099" class="btn btn-gold" target="_blank" rel="noopener">💬 Ask on WhatsApp</a></div>
+      <div class="faqs-list reveal" style="transition-delay:.15s;">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does a typical repair take?<span class="faq-icon">+</span></div><div class="faq-a"><p>Most phone repairs (screens, batteries, ports) are completed within 1–3 hours. Laptop repairs may take 1–2 days depending on parts availability. We'll give you an accurate estimate after diagnostics.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer a warranty on repairs?<span class="faq-icon">+</span></div><div class="faq-a"><p>Yes! All repairs come with a warranty. Screen replacements carry a 3-month warranty, and other hardware repairs carry a 1-month warranty on parts and labour.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can you come to my home or office?<span class="faq-icon">+</span></div><div class="faq-a"><p>Yes, for some repairs we offer home/office pickup and delivery within Nairobi. Contact us via WhatsApp to check availability in your area and confirm pickup fees.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is my data safe during repairs?<span class="faq-icon">+</span></div><div class="faq-a"><p>Absolutely. We handle your device with full confidentiality. We recommend backing up your data before bringing in your device, but we never access your personal files during repairs.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What payment methods do you accept?<span class="faq-icon">+</span></div><div class="faq-a"><p>We accept M-Pesa, cash, and bank transfers. Payment is collected upon completion of the repair. No deposit required for standard repairs.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you use genuine parts?<span class="faq-icon">+</span></div><div class="faq-a"><p>We use high-quality OEM and compatible parts sourced from trusted suppliers. We'll always inform you about the part type and you can choose based on your budget.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="padding:8rem 0;background:var(--black);">
+  <div class="container">
+    <div class="team-header reveal"><span class="section-label">Our Team</span><h2 class="section-title">Meet the Specialist</h2><div class="divider"></div></div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-avatar"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><circle cx="24" cy="16" r="9" stroke="#00D4D8" stroke-width="1.5"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00D4D8" stroke-width="1.5"/></svg></div><div class="team-name">Moses Lugalia</div><div class="team-role">Lead Technician & Founder</div><p class="team-bio">Certified electronics technician with years of hands-on experience. Moses founded Learned Electronics to deliver honest, quality repairs accessible to everyone in Kenya.</p></div>
+      <div class="team-card reveal" style="transition-delay:.1s;"><div class="team-avatar"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><circle cx="24" cy="16" r="9" stroke="#00D4D8" stroke-width="1.5"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00D4D8" stroke-width="1.5"/></svg></div><div class="team-name">Hardware Specialist</div><div class="team-role">Motherboard & Component Repair</div><p class="team-bio">Expert in complex hardware diagnostics and micro-soldering. Handles challenging faults including water damage and motherboard-level repairs.</p></div>
+      <div class="team-card reveal" style="transition-delay:.2s;"><div class="team-avatar"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><circle cx="24" cy="16" r="9" stroke="#00D4D8" stroke-width="1.5"/><path d="M8 40c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00D4D8" stroke-width="1.5"/></svg></div><div class="team-name">Software Technician</div><div class="team-role">OS, Data & Software Solutions</div><p class="team-bio">Specialises in software troubleshooting, data recovery, OS reinstallation and network configuration across Windows, macOS and Android.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:8rem 0;background:var(--black-2);">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="reveal">
+        <span class="section-label">Get in Touch</span><h2 class="section-title">Contact Us</h2><div class="divider"></div>
+        <p>Have a question or ready to book a repair? Reach us via any channel below — we typically respond within 30 minutes.</p>
+        <div class="contact-detail"><div class="cd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.13 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="cd-text"><strong>WhatsApp / Phone</strong><span>+254 769 319 099</span></div></div>
+        <div class="contact-detail"><div class="cd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="cd-text"><strong>Email</strong><span>learnermine01@gmail.com</span></div></div>
+        <div class="contact-detail"><div class="cd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="cd-text"><strong>Working Hours</strong><span>Monday – Saturday: 8:00 AM – 6:00 PM</span></div></div>
+        <div class="contact-detail"><div class="cd-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D4D8" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cd-text"><strong>Location</strong><span>Kenya (Pickup & Walk-in available)</span></div></div>
+        <div style="margin-top:2rem;"><a href="https://wa.me/254769319099" class="btn btn-gold" target="_blank" rel="noopener">💬 Start WhatsApp Chat</a></div>
+      </div>
+      <div class="contact-form-box reveal" style="transition-delay:.2s;">
+        <h3>Send Us a Message</h3>
+        <div class="contact-row2">
+          <div class="form-row"><label>Name</label><input type="text" placeholder="Your name"/></div>
+          <div class="form-row"><label>Phone</label><input type="tel" placeholder="+254 7XX XXX XXX"/></div>
+        </div>
+        <div class="form-row"><label>Device & Problem</label><input type="text" placeholder="e.g. Samsung A52 – cracked screen"/></div>
+        <div class="form-row"><label>Message</label><textarea placeholder="Tell us more about your device issue..."></textarea></div>
+        <button class="btn btn-gold" style="width:100%;" onclick="submitContact(this)">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-family:var(--fd);font-size:1.7rem;font-weight:700;color:var(--gold);">Learned<span style="color:var(--white)">Electronics</span></div>
+        <p>Nairobi's trusted electronics repair specialist. Fast, honest, and professional repairs for all your devices.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/254769319099" class="social-btn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.12 1.528 5.849L.057 23.05a.5.5 0 00.614.614l5.188-1.464A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.001-1.367l-.358-.214-3.714 1.048 1.063-3.618-.234-.371A9.818 9.818 0 112 12c0 5.416 4.402 9.818 9.818 9.818H12z"/></svg></a>
+          <a href="mailto:learnermine01@gmail.com" class="social-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="#" class="social-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a onclick="goSection('services')">Phone Repairs</a></li><li><a onclick="goSection('services')">Laptop Repairs</a></li><li><a onclick="goSection('services')">Computer Repairs</a></li><li><a onclick="goSection('services')">Gaming Devices</a></li><li><a onclick="goSection('services')">Data Recovery</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="goSection('about')">About Us</a></li><li><a onclick="goSection('team')">Our Team</a></li><li><a onclick="goSection('gallery')">Portfolio</a></li><li><a onclick="goSection('testimonials')">Reviews</a></li><li><a onclick="goSection('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="goSection('booking')">Book a Repair</a></li><li><a onclick="goSection('pricing')">Pricing</a></li><li><a onclick="goSection('products')">Shop Parts</a></li><li><a onclick="goSection('faqs')">FAQs</a></li><li><a href="https://wa.me/254769319099" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Learned Electronics. All rights reserved.</p><span>Built with care for Kenya 🇰🇪</span></div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/254769319099" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.12 1.528 5.849L.057 23.05a.5.5 0 00.614.614l5.188-1.464A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.798 9.798 0 01-5.001-1.367l-.358-.214-3.714 1.048 1.063-3.618-.234-.371A9.818 9.818 0 112 12c0 5.416 4.402 9.818 9.818 9.818H12z"/></svg>
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+</a>
+
+<script>
+  /* === NAVIGATION — uses JS scrollIntoView, no href anchors === */
+  function goSection(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function mGoSection(id) {
+    document.getElementById('mobileMenu').classList.remove('open');
+    setTimeout(() => goSection(id), 250);
+  }
+
+  /* Nav scroll effect */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  /* Mobile menu */
+  document.getElementById('hamburger').onclick = () => document.getElementById('mobileMenu').classList.add('open');
+  document.getElementById('closeMenu').onclick = () => document.getElementById('mobileMenu').classList.remove('open');
+
+  /* Scroll reveal */
+  const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* === MULTI-STEP FORM === */
+  const fd = { deviceType:'', deviceModel:'', problems:[], problemDesc:'', location:'', service:'', urgency:'', name:'', phone:'', email:'' };
+
+  function nextStep(from) {
+    if (from===1 && !fd.deviceType) { alert('Please select a device type first.'); return; }
+    if (from===2 && fd.problems.length===0) { alert('Please select at least one problem type.'); return; }
+    if (from===3 && !document.getElementById('location').value.trim()) { alert('Please enter your location.'); return; }
+    updateForm(from+1);
+  }
+  function prevStep(from) { updateForm(from-1); }
+
+  function updateForm(step) {
+    document.querySelectorAll('.form-step').forEach((s,i) => s.classList.toggle('active', i+1===step));
+    for (let i=1;i<=4;i++) {
+      const ps = document.getElementById('ps'+i);
+      ps.classList.remove('active','done');
+      if (i===step) ps.classList.add('active');
+      else if (i<step) ps.classList.add('done');
+      if (i<4) document.getElementById('pl'+i).classList.toggle('done', i<step);
+    }
+  }
+
+  function selTile(el, groupId, multi=false) {
+    const grp = document.getElementById(groupId);
+    if (!multi) {
+      grp.querySelectorAll('.tile').forEach(t=>t.classList.remove('selected'));
+      el.classList.add('selected');
+      fd.deviceType = el.dataset.val;
+    } else {
+      el.classList.toggle('selected');
+      fd.problems = [...grp.querySelectorAll('.tile.selected')].map(t=>t.dataset.val);
+    }
+  }
+
+  function selUrgency(el, val) {
+    document.querySelectorAll('.urgency-btn').forEach(b=>b.classList.remove('selected'));
+    el.classList.add('selected');
+    fd.urgency = val;
+  }
+
+  function submitBooking() {
+    const name = document.getElementById('clientName').value.trim();
+    const phone = document.getElementById('clientPhone').value.trim();
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    Object.assign(fd, { name, phone,
+      email: document.getElementById('clientEmail').value,
+      deviceModel: document.getElementById('deviceModel').value,
+      problemDesc: document.getElementById('problemDesc').value,
+      location: document.getElementById('location').value,
+      service: document.getElementById('serviceType').value
+    });
+    const msg = encodeURIComponent(
+      `*New Repair Booking – Learned Electronics*\n\n` +
+      `👤 *Name:* ${fd.name}\n📞 *Phone:* ${fd.phone}\n` +
+      `📱 *Device:* ${fd.deviceType} – ${fd.deviceModel}\n` +
+      `🔧 *Issues:* ${fd.problems.join(', ')}\n` +
+      `📝 *Description:* ${fd.problemDesc}\n` +
+      `📍 *Location:* ${fd.location}\n🚗 *Service:* ${fd.service}\n⏰ *Urgency:* ${fd.urgency}\n\n` +
+      `Please confirm my booking and provide a quote. Thank you!`
+    );
+    document.querySelectorAll('.form-step').forEach(s=>s.style.display='none');
+    document.querySelector('.form-progress').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+    setTimeout(() => window.open(`https://wa.me/254769319099?text=${msg}`,'_blank'), 900);
+  }
+
+  /* Product filter */
+  function filterProd(btn, cat) {
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(c => c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none');
+  }
+
+  /* Add to cart */
+  function addCart(btn) {
+    btn.innerHTML='✓'; btn.style.background='var(--gold)'; btn.style.color='var(--black)';
+    setTimeout(()=>{ btn.innerHTML='+'; btn.style.background=''; btn.style.color=''; },2000);
+  }
+
+  /* FAQ */
+  function toggleFaq(el) {
+    const item=el.parentElement, wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  }
+
+  /* Contact form */
+  function submitContact(btn) {
+    const orig=btn.innerHTML;
+    btn.innerHTML='✓ Message Sent!'; btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)'; btn.disabled=true;
+    setTimeout(()=>{ btn.innerHTML=orig; btn.style.background=''; btn.disabled=false; },3000);
+  }
+</script>
+</body>
+</html>
